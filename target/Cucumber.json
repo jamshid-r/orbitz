@@ -1,0 +1,116 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-04-28T00:43:31.271Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3103000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.orbitz.step_definitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 19,
+        "name": "Verify Weekly deald booking options",
+        "description": "",
+        "id": "verification-of-deals-functionality;verify-weekly-deald-booking-options",
+        "after": [
+          {
+            "result": {
+              "duration": 726000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.orbitz.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3122000000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I am on the homepage",
+            "match": {
+              "location": "com.orbitz.step_definitions.DealsFunctionality.i_am_on_the_homepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 9020000000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "I click on Deals link",
+            "match": {
+              "location": "com.orbitz.step_definitions.DealsFunctionality.i_click_on_Deals_link()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 13000000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "Correct title should be dispalayed",
+            "match": {
+              "location": "com.orbitz.step_definitions.DealsFunctionality.correct_title_should_be_dispalayed()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 178000000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "The fallowing booking options should display",
+            "match": {
+              "location": "com.orbitz.step_definitions.DealsFunctionality.the_fallowing_booking_options_should_display(java.util.List\u003cjava.lang.String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Hotel only"
+                ]
+              },
+              {
+                "cells": [
+                  "Flight only"
+                ]
+              },
+              {
+                "cells": [
+                  "Flight + Hotel"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@test"
+          }
+        ]
+      }
+    ],
+    "name": "Verification of Deals functionality",
+    "description": "",
+    "id": "verification-of-deals-functionality",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/com/orbitz/features/deals_functionality.feature",
+    "tags": []
+  }
+]
