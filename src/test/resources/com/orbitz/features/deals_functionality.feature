@@ -34,7 +34,7 @@ Scenario: Verify Deals Page booking elements
 			When I click on Deals link
 			Then I should be able to see boxes bof destination, check in date, check out date, rooms, adults count, children count
 		
-			@test			
+#			@test			
 Scenario: Verify Deals Page booking elements
 
 			Given I am on the homepage
