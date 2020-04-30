@@ -11,13 +11,16 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
 
+
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Driver {
 	
 	private Driver() {};
 	//Singleton  Driver class is used below is used to use only one instance of the driver
-	private static WebDriver driver; //ptivate access modifier will prevent accidently create an object(initialize another driver)
+	
+	private static WebDriver driver;           //private access modifier will prevent accidently create an object(initialize another driver)
 	
 	public static WebDriver getDriver() {
 		if(driver == null) { // this if statement to make sure that driver is being initialized only once. 
