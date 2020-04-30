@@ -1,6 +1,6 @@
 Feature: This feature will test a LogIn Functionality with invalid credentials 
 
-   @bravo
+   @test1
   Scenario Outline: Validate if the user is not allowed access when the credentials entered are incorrect.
   
     Given Verify that user launch on login page by Orbitz title

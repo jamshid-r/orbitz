@@ -1,6 +1,6 @@
 Feature: This feature will test a LogIn Functionality with reset password
 
-@bravo
+@test1
    Scenario: Verify the ‘Forgot Password’ functionality.
     
     Given Verify that user launch on login page by Orbitz title

@@ -11,7 +11,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class DealsFunctionality {
-	
+
 	DealsPage dealsPage = new DealsPage();
 	// BrowserUtilities brUtils = new BrowserUtilities();
 	String actual;
@@ -24,16 +24,20 @@ public class DealsFunctionality {
 
 	@When("I click on Deals link")
 	public void i_click_on_Deals_link() {
+		
+		BrowserUtilities.waitForPageToLoad(5000);
 		dealsPage.dealsLink.click();
 		// brUtils.waitForPageToLoad(5);
-		BrowserUtilities.waitForPageToLoad(5000);
+		//BrowserUtilities.waitForPageToLoad(5000);
 	}
 
 	@Then("Correct title should be dispalayed")
 	public void correct_title_should_be_dispalayed() {
 
 		actual = Driver.getDriver().getTitle();
+		System.out.println("actual"+actual);
 		expected = "Travel Deals";
+		System.out.println("expected"+expected);
 		Assert.assertTrue(actual.contains(expected));
 	}
 
@@ -54,6 +58,10 @@ public class DealsFunctionality {
 
 	@Then("I should be able to see boxes bof destination, check in date, check out date, rooms, adults count, children count")
 	public void i_should_be_able_to_see_boxes_bof_destination_check_in_date_check_out_date_rooms_adults_count_children_count() {
+
+
+//		boolean goinTo = dealsPage.goingToBox.isDisplayed();
+//		Assert.assertTrue(goinTo);
 		
 		dealsPage.goingToBox.isDisplayed();
 		dealsPage.departDateBox.isDisplayed();
@@ -65,16 +73,12 @@ public class DealsFunctionality {
 
 	}
 
-@Then("The following subcategories should be displayed")
-public void the_following_subcategories_should_be_displayed(List<String> subcategories) {
-	 for (String subItem : subcategories) {
-	 	   assertTrue(dealsPage.todaysTopDealsSubcategories(subItem).isDisplayed());
-    
-}
-<<<<<<< HEAD
-=======
+	@Then("The following subcategories should be displayed")
+	public void the_following_subcategories_should_be_displayed(List<String> subcategories) {
+		
+		for (String subItem : subcategories) {
+			assertTrue(dealsPage.todaysTopDealsSubcategories(subItem).isDisplayed());
 
+		}
+	}
 }
-}
-
->>>>>>> f13b9137bfe866e88c18b45861ecb524ba0239fe

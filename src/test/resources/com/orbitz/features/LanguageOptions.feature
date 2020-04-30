@@ -1,4 +1,4 @@
-Feature: This feature will test a LogIn Functionality with valid credentials 
+Feature: This feature will test a language Functionality with valid credentials 
 
   @test
   Scenario: Verify if a user will be able to login with a valid Email address and valid password.
@@ -12,6 +12,3 @@ Feature: This feature will test a LogIn Functionality with valid credentials
     Then  The user clicks on Sign In button 
     #Then  Verify that user landed on Home page by his own name 
    
-
-
-  
