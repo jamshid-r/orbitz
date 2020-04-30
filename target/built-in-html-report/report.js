@@ -5,7 +5,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.scenario({
-  "name": "Verify Deals Page booking elements",
+  "name": "Verify Today\u0027s Top Deals subcategories",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -38,11 +38,19 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "I should be able to see boxes bof destination, check in date, check out date, rooms, adults count, children count",
+  "name": "The following subcategories should be displayed",
+  "rows": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.orbitz.step_definitions.DealsFunctionality.i_should_be_able_to_see_boxes_bof_destination_check_in_date_check_out_date_rooms_adults_count_children_count()"
+  "location": "com.orbitz.step_definitions.DealsFunctionality.the_following_subcategories_should_be_displayed(java.util.List\u003cjava.lang.String\u003e)"
 });
 formatter.result({
   "status": "passed"

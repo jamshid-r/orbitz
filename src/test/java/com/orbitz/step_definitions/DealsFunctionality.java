@@ -66,6 +66,14 @@ public class DealsFunctionality {
 		
 	
 	}
+
+@Then("The following subcategories should be displayed")
+public void the_following_subcategories_should_be_displayed(List<String> subcategories) {
+	 for (String subItem : subcategories) {
+	 	   assertTrue(dealsPage.todaysTopDealsSubcategories(subItem).isDisplayed());
+    
 }
 
+}
+}
 
