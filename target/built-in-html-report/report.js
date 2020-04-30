@@ -5,7 +5,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.scenario({
-  "name": "Verify Weekly deald booking options",
+  "name": "Verify Deals Page booking elements",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -38,26 +38,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "Correct title should be dispalayed",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "com.orbitz.step_definitions.DealsFunctionality.correct_title_should_be_dispalayed()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "The fallowing booking options should display",
-  "rows": [
-    {},
-    {},
-    {}
-  ],
+  "name": "I should be able to see boxes bof destination, check in date, check out date, rooms, adults count, children count",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.orbitz.step_definitions.DealsFunctionality.the_fallowing_booking_options_should_display(java.util.List\u003cjava.lang.String\u003e)"
+  "location": "com.orbitz.step_definitions.DealsFunctionality.i_should_be_able_to_see_boxes_bof_destination_check_in_date_check_out_date_rooms_adults_count_children_count()"
 });
 formatter.result({
   "status": "passed"

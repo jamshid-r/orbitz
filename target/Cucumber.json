@@ -3,11 +3,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-04-28T00:43:31.271Z",
+        "start_timestamp": "2020-04-28T19:10:21.214Z",
         "before": [
           {
             "result": {
-              "duration": 3103000000,
+              "duration": 5648000000,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 19,
-        "name": "Verify Weekly deald booking options",
+        "line": 31,
+        "name": "Verify Deals Page booking elements",
         "description": "",
-        "id": "verification-of-deals-functionality;verify-weekly-deald-booking-options",
+        "id": "verification-of-deals-functionality;verify-deals-page-booking-elements",
         "after": [
           {
             "result": {
-              "duration": 726000000,
+              "duration": 1028000000,
               "status": "passed"
             },
             "match": {
@@ -35,10 +35,10 @@
         "steps": [
           {
             "result": {
-              "duration": 3122000000,
+              "duration": 20029000000,
               "status": "passed"
             },
-            "line": 21,
+            "line": 33,
             "name": "I am on the homepage",
             "match": {
               "location": "com.orbitz.step_definitions.DealsFunctionality.i_am_on_the_homepage()"
@@ -47,10 +47,10 @@
           },
           {
             "result": {
-              "duration": 9020000000,
+              "duration": 10364000000,
               "status": "passed"
             },
-            "line": 22,
+            "line": 34,
             "name": "I click on Deals link",
             "match": {
               "location": "com.orbitz.step_definitions.DealsFunctionality.i_click_on_Deals_link()"
@@ -59,43 +59,14 @@
           },
           {
             "result": {
-              "duration": 13000000,
+              "duration": 2036000000,
               "status": "passed"
             },
-            "line": 23,
-            "name": "Correct title should be dispalayed",
+            "line": 35,
+            "name": "I should be able to see boxes bof destination, check in date, check out date, rooms, adults count, children count",
             "match": {
-              "location": "com.orbitz.step_definitions.DealsFunctionality.correct_title_should_be_dispalayed()"
+              "location": "com.orbitz.step_definitions.DealsFunctionality.i_should_be_able_to_see_boxes_bof_destination_check_in_date_check_out_date_rooms_adults_count_children_count()"
             },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 178000000,
-              "status": "passed"
-            },
-            "line": 24,
-            "name": "The fallowing booking options should display",
-            "match": {
-              "location": "com.orbitz.step_definitions.DealsFunctionality.the_fallowing_booking_options_should_display(java.util.List\u003cjava.lang.String\u003e)"
-            },
-            "rows": [
-              {
-                "cells": [
-                  "Hotel only"
-                ]
-              },
-              {
-                "cells": [
-                  "Flight only"
-                ]
-              },
-              {
-                "cells": [
-                  "Flight + Hotel"
-                ]
-              }
-            ],
             "keyword": "Then "
           }
         ],

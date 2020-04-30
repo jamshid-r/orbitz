@@ -5,6 +5,7 @@ import static org.junit.Assert.assertTrue;
 import java.util.List;
 
 import org.junit.Assert;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Wait;
 
 import com.orbitz.pages.DealsPage;
@@ -53,7 +54,18 @@ public class DealsFunctionality {
 		     //assertTrue(wPage.getSubcategoriy(subcategories.get(1)).isDisplayed()); 
 		    }
 			}
+	@Then("I should be able to see boxes bof destination, check in date, check out date, rooms, adults count, children count")
+	public void i_should_be_able_to_see_boxes_bof_destination_check_in_date_check_out_date_rooms_adults_count_children_count() {
+		dealsPage.goingToBox.isDisplayed();
+		dealsPage.departDateBox.isDisplayed();
+		dealsPage.returnDateBox.isDisplayed();
+		dealsPage.roomCountDropdown.isDisplayed();
+		dealsPage.adultsCountDropdown.isDisplayed();
+		dealsPage.childrenCountDropdown.isDisplayed();
+		dealsPage.searchButton.isDisplayed();
+		
+	
 	}
-
+}
 
 

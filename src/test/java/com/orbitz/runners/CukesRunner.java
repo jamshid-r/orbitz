@@ -17,7 +17,7 @@ import io.cucumber.junit.CucumberOptions;
 		tags = "@test", //"@smoke and @test"
 		features= "src/test/resources/com/orbitz/features",
 		glue = "com/orbitz/step_definitions"
-		,strict =true
+//		,strict =true
 //		,dryRun = true
 		,monochrome =true
 		,stepNotifications = true
