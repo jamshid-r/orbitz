@@ -3,11 +3,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-04-28T19:10:21.214Z",
+        "start_timestamp": "2020-04-30T16:57:42.404Z",
         "before": [
           {
             "result": {
-              "duration": 5648000000,
+              "duration": 2970000000,
               "status": "passed"
             },
             "match": {
@@ -15,14 +15,14 @@
             }
           }
         ],
-        "line": 31,
-        "name": "Verify Deals Page booking elements",
+        "line": 38,
+        "name": "Verify Today\u0027s Top Deals subcategories",
         "description": "",
-        "id": "verification-of-deals-functionality;verify-deals-page-booking-elements",
+        "id": "verification-of-deals-functionality;verify-today-s-top-deals-subcategories",
         "after": [
           {
             "result": {
-              "duration": 1028000000,
+              "duration": 707000000,
               "status": "passed"
             },
             "match": {
@@ -35,10 +35,10 @@
         "steps": [
           {
             "result": {
-              "duration": 20029000000,
+              "duration": 2840000000,
               "status": "passed"
             },
-            "line": 33,
+            "line": 40,
             "name": "I am on the homepage",
             "match": {
               "location": "com.orbitz.step_definitions.DealsFunctionality.i_am_on_the_homepage()"
@@ -47,10 +47,10 @@
           },
           {
             "result": {
-              "duration": 10364000000,
+              "duration": 6956000000,
               "status": "passed"
             },
-            "line": 34,
+            "line": 41,
             "name": "I click on Deals link",
             "match": {
               "location": "com.orbitz.step_definitions.DealsFunctionality.i_click_on_Deals_link()"
@@ -59,14 +59,46 @@
           },
           {
             "result": {
-              "duration": 2036000000,
+              "duration": 280000000,
               "status": "passed"
             },
-            "line": 35,
-            "name": "I should be able to see boxes bof destination, check in date, check out date, rooms, adults count, children count",
+            "line": 42,
+            "name": "The following subcategories should be displayed",
             "match": {
-              "location": "com.orbitz.step_definitions.DealsFunctionality.i_should_be_able_to_see_boxes_bof_destination_check_in_date_check_out_date_rooms_adults_count_children_count()"
+              "location": "com.orbitz.step_definitions.DealsFunctionality.the_following_subcategories_should_be_displayed(java.util.List\u003cjava.lang.String\u003e)"
             },
+            "rows": [
+              {
+                "cells": [
+                  "top-hotel-deals"
+                ]
+              },
+              {
+                "cells": [
+                  "member-discounts"
+                ]
+              },
+              {
+                "cells": [
+                  "top-rated-hotels"
+                ]
+              },
+              {
+                "cells": [
+                  "weekend-road-trips"
+                ]
+              },
+              {
+                "cells": [
+                  "last-minute"
+                ]
+              },
+              {
+                "cells": [
+                  "pet-friendly"
+                ]
+              }
+            ],
             "keyword": "Then "
           }
         ],

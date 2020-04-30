@@ -63,6 +63,15 @@ public class DealsPage {
 	@FindBy (id ="FH-searchButtonExt1")
 	public WebElement searchButton;
 	
+	@FindBy (xpath = "//div[contains(@class,'editorial-result-card')]//a[contains(@href,'weekend-road-trips')]")
+	public WebElement todaysTopDealsSubcategories;
+	
+	public WebElement todaysTopDealsSubcategories(String options) {
+		String customXpath = "//div[contains(@class,'editorial-result-card')]//a[contains(@href,'"+options+"')]";
+				
+		return Driver.getDriver().findElement(By.xpath(customXpath));
+}
+	
 }
 
 

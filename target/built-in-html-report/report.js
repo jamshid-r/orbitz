@@ -5,7 +5,11 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.scenario({
+<<<<<<< HEAD
   "name": "test",
+=======
+  "name": "Verify Today\u0027s Top Deals subcategories",
+>>>>>>> f13b9137bfe866e88c18b45861ecb524ba0239fe
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -38,6 +42,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
+<<<<<<< HEAD
   "name": "Verify that user on Search Flights page",
   "keyword": "And "
 });
@@ -133,6 +138,21 @@ formatter.step({
 });
 formatter.match({
   "location": "com.orbitz.step_definitions.FlightsFuncrionality.the_user_clicks_on_Search_Hotel_and_Car_button()"
+=======
+  "name": "The following subcategories should be displayed",
+  "rows": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.orbitz.step_definitions.DealsFunctionality.the_following_subcategories_should_be_displayed(java.util.List\u003cjava.lang.String\u003e)"
+>>>>>>> f13b9137bfe866e88c18b45861ecb524ba0239fe
 });
 formatter.result({
   "status": "passed"
