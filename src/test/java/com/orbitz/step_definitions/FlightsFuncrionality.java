@@ -18,7 +18,7 @@ public class FlightsFuncrionality {
 	FlightPage flightPage = new FlightPage();
 	@Given("Verify that user launch on login page by Orbitz title")
 	public void verify_that_user_launch_on_login_page_by_Orbitz_title() {
-		Driver.getDriver().navigate().to("https://www.orbitz.com");
+		//Driver.getDriver().navigate().to("https://www.orbitz.com");
 		String loginTitleActual = Driver.getDriver().getTitle();
 		String loginTitleExpected = "Orbitz Flights, Cheap Vacations, Rental Cars & Hotel Deals";
 		// Asserts that two Strings are equal. If they are not, an AssertionError will

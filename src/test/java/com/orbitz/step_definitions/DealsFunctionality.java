@@ -3,6 +3,8 @@ package com.orbitz.step_definitions;
 import static org.junit.Assert.assertTrue;
 import java.util.List;
 import org.junit.Assert;
+
+import com.orbitz.beans.Entry;
 import com.orbitz.pages.DealsPage;
 import com.orbitz.utilities.BrowserUtilities;
 import com.orbitz.utilities.Driver;
@@ -17,10 +19,10 @@ public class DealsFunctionality {
 	String actual;
 	String expected;
 
-	@Given("I am on the homepage")
-	public void i_am_on_the_homepage() {
-		Driver.getDriver().get(com.orbitz.utilities.ConfigReader.getConfiguration("url"));
-	}
+	//@Given("Verify that user launch on login page by Orbitz title")
+//	public void i_am_on_the_homepage() {
+//		//Driver.getDriver().get(com.orbitz.utilities.ConfigReader.getConfiguration("url"));
+//	}
 
 	@When("I click on Deals link")
 	public void i_click_on_Deals_link() {
@@ -81,4 +83,15 @@ public class DealsFunctionality {
 
 		}
 	}
+	
+	@Then("I pass the following data and when some of the fields are left empty, the proper error message should appear")
+	public void i_pass_the_following_data_and_when_some_of_the_fields_are_left_empty_the_proper_error_message_should_appear(List<Entry>list) {
+	   
+		
+		for (Entry entry : list) {
+			System.out.println(entry.getCheckIn()+"  "+entry.getDestination());
+		}
+	}
+
+
 }

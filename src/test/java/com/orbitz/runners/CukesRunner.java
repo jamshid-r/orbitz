@@ -17,14 +17,14 @@ import io.cucumber.junit.CucumberOptions;
 
 		},
 
-		tags = "@test", 
+		tags = "@my"//"@dj" //"@test", 
 	   
-		features = "src/test/resources/com/orbitz/features", 
+		,features = "src/test/resources/com/orbitz/features", 
 		glue = "com/orbitz/step_definitions"
 		
-//		,strict =true
-		,dryRun = false
-		//, monochrome = true, stepNotifications = true
+		,strict =true
+//		,dryRun = true
+		, monochrome = true, stepNotifications = true
 //		,snippets = SnippetType.CAMELCASE
 
 )

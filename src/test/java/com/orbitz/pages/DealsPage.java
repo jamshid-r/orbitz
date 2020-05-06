@@ -71,9 +71,15 @@ public class DealsPage {
 				
 		return Driver.getDriver().findElement(By.xpath(customXpath));
 }
-	
+//	@FindBy (xpath = "(//li[@role=\"presentation\"]//span[contains(., 'Hotel only')])]")
+//	public WebElement bookingOprions;
+//	
+//	public WebElement bookingOptions(String options) {
+//		String customXpath = "//li[@role=\"presentation\"]//span[contains(., '"+options+"')]" ;
+//		return Driver.getDriver().findElement(By.xpath(customXpath));
+//	
+//}
 }
-
 
 
 
