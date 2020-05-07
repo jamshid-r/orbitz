@@ -8,12 +8,12 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 
-//		plugin = {"rerun:target/rerun.txt",
-//				"html:target/built-in-html-report",
-//				"json:target/Cucumber.json "
-
-		plugin = { "pretty", "html:target/built-in-html-report", 
+		plugin = {"rerun:target/rerun.txt",
+				"html:target/built-in-html-report",
 				"json:target/Cucumber.json "
+
+//		plugin = { "pretty", "html:target/built-in-html-report", 
+//				"json:target/Cucumber.json "
 
 		},
 

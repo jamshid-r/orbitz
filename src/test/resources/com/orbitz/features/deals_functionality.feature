@@ -42,13 +42,33 @@ Feature: Verification of Deals functionality
       | last-minute        |
       | pet-friendly       |
       
-   @test, @dj, @my
-   Scenario: Verify error messages
+   @test, @dj
+   Scenario Outline: Verify error messages
    	Given Verify that user launch on login page by Orbitz title
    	When I click on Deals link
-   	Then 	I pass the following data and when some of the fields are left empty, the proper error message should appear
+   	When I enter info into the "<Destination>", "<Check-in>" and "<Check-out>" fields
+   	Then when some of the fields are left empty, the proper "<Error Message>" should appear
+
+   	
+   	Examples:
    	| Destination | Check-in  	 | Check-out		|	Error Message						  |
-   	| Chicago			| '06/01/2020' | 	  			    | Destination is required.  |
+   	| 						| '06/01/2020' | '06/01/2020' | Destination is required.  |
    	| Chicago		  |  					   | '06/02/2020' | Check-in is required. 	  |
-   	| 					  | '06/01/2020' | '06/01/2020'	| Check-out is required.    |
-      
+   	| Chicago		  | '06/01/2020' | 							| Check-out is required.    |
+   	
+   	
+   	
+   @test, @dj, @my
+   Scenario Outline: Verify Payment Type functionality when filtering results
+   Given Verify that user launch on login page by Orbitz title
+   	When I click on Deals link
+   	When I enter correct info into the "<Destination>", "<Check-in>" and "<Check-out>" fields and click on Search button
+   	Then I verify page title contains "<Destination>"
+   	And I check <payment type> payment option 
+   	And Results must contain the text of my "<payment type>" selections
+   	
+   	Examples:
+   	| payment type           | Destination  | Check-in  	 | Check-out		|
+   	|	Free cancellation 		 | Chicago		  | 06/01/2020 | 06/02/2020 	|
+   	| Reserve now, pay later | Chicago		  | 06/01/2020 | 06/02/2020 	|
+   	

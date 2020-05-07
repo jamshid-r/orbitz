@@ -96,4 +96,37 @@ public class FlightsFuncrionality {
 		flightPage.searchFligthCarButton.click();
 		// Thread.sleep(9000);
 	}
+	@When("User provides {string} info to Flying from field")
+	public void user_provides_info_to_Flying_from_field(String FlyingFrom) {
+		flightPage.flyingFromInput.sendKeys(FlyingFrom);
+	}
+	@When("Provides {string} info to Flying to field")
+	public void provides_info_to_Flying_to_field(String FlyingTo) {
+		flightPage.flyingToInput.sendKeys(FlyingTo);
+	}
+	@When("User provides {string} info of fligth")
+	public void user_provides_info_of_fligth(String DepartingDate) {
+		flightPage.flightDepartDate.sendKeys(DepartingDate);
+	}
+	@When("User provides {string} info")
+	public void user_provides_info(String ReturningDate) {
+		flightPage.flightReturningDate.clear();
+		flightPage.flightReturningDate.sendKeys(ReturningDate);
+	}
+	@When("Select {string} value to Adualts field")
+	public void select_value_to_Adualts_field(String adultCount) {
+		BrowserUtilities.selectByValue(flightPage.adualts, adultCount);
+	}
+	@When("Select {string} value to Children field")
+	public void select_value_to_Children_field(String childrenCount) {
+		BrowserUtilities.selectByValue(flightPage.children, childrenCount);
+	}
+	@Then("verify error message")
+	public void verify_error_message() {
+		String actual = flightPage.errorMessage.getText();
+		String expected = "Please provide the ages of children below.";
+		Assert.assertEquals(actual, expected);
+		System.out.println("Assert passed - printed");
+	}
 }
+

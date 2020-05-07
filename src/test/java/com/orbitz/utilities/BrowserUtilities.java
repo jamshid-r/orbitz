@@ -26,6 +26,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -181,6 +182,32 @@ public class BrowserUtilities {
                 + ".png";
         ImageIO.write(fpScreenshot.getImage(), "PNG", new File(path));
     }
+    public static void selectFromList(List<WebElement> list, String value) {
+		for (WebElement element : list)
+			if (element.getText().contains(value)) {
+				element.click();
+				break;
+			}
+	}
+	public static void selectFromListByDataValue(List<WebElement> list, String value) {
+		for (WebElement element : list)
+			if (element.getAttribute("data-value").equals(value)) {
+				element.click();
+				break;
+			}
+	}
+	public static void selectByIndex(WebElement element, int index) {
+		Select select = new Select(element);
+		select.selectByIndex(index);
+	}
+	public static void selectByValue(WebElement element, String value) {
+		Select select = new Select(element);
+		select.selectByValue(value);
+	}
+	public static void selectByVisibleText(WebElement element, String text) {
+		Select select = new Select(element);
+		select.selectByVisibleText(text);
+	}
 
 
 }

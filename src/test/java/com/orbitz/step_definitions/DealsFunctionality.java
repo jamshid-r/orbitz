@@ -1,8 +1,10 @@
 package com.orbitz.step_definitions;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import java.util.List;
 import org.junit.Assert;
+import org.openqa.selenium.WebElement;
 
 import com.orbitz.beans.Entry;
 import com.orbitz.pages.DealsPage;
@@ -15,14 +17,11 @@ import io.cucumber.java.en.When;
 public class DealsFunctionality {
 
 	DealsPage dealsPage = new DealsPage();
-	// BrowserUtilities brUtils = new BrowserUtilities();
+
 	String actual;
 	String expected;
 
-	//@Given("Verify that user launch on login page by Orbitz title")
-//	public void i_am_on_the_homepage() {
-//		//Driver.getDriver().get(com.orbitz.utilities.ConfigReader.getConfiguration("url"));
-//	}
+	
 
 	@When("I click on Deals link")
 	public void i_click_on_Deals_link() {
@@ -51,19 +50,15 @@ public class DealsFunctionality {
 
 	@Then("The fallowing booking options should display")
 	public void the_fallowing_booking_options_should_display(List<String> subcategories) {
-		// dealsPage.bookingOprions
+		
 		for (String subItem : subcategories) {
 			assertTrue(dealsPage.bookingOptions(subItem).isDisplayed());
-			// assertTrue(wPage.getSubcategoriy(subcategories.get(1)).isDisplayed());
+			
 		}
 	}
 
 	@Then("I should be able to see boxes bof destination, check in date, check out date, rooms, adults count, children count")
 	public void i_should_be_able_to_see_boxes_bof_destination_check_in_date_check_out_date_rooms_adults_count_children_count() {
-
-
-//		boolean goinTo = dealsPage.goingToBox.isDisplayed();
-//		Assert.assertTrue(goinTo);
 		
 		dealsPage.goingToBox.isDisplayed();
 		dealsPage.departDateBox.isDisplayed();
@@ -84,14 +79,83 @@ public class DealsFunctionality {
 		}
 	}
 	
-	@Then("I pass the following data and when some of the fields are left empty, the proper error message should appear")
-	public void i_pass_the_following_data_and_when_some_of_the_fields_are_left_empty_the_proper_error_message_should_appear(List<Entry>list) {
-	   
+
+	@When("I enter info into the {string}, {string} and {string} fields")
+	public void i_enter_info_into_the_and_fields(String string, String string2, String string3) {
+		DealsPage dp = new DealsPage();
+		dp.destinationField.sendKeys(string);
+		dp.checkInDate.sendKeys(string2);
+		dp.checkOutDate.sendKeys(string3);
+		dp.searchButton.click();
 		
-		for (Entry entry : list) {
-			System.out.println(entry.getCheckIn()+"  "+entry.getDestination());
-		}
 	}
+
+	@Then("when some of the fields are left empty, the proper {string} should appear")
+	public void when_some_of_the_fields_are_left_empty_the_proper_should_appear(String string) {
+		DealsPage dp = new DealsPage();
+		String actual = dp.errorMessages(string).getText();
+		String expected = string;
+		assertEquals(expected, actual);
+	}
+	
+	@When("I enter correct info into the {string}, {string} and {string} fields and click on Search button")
+	public void i_enter_correct_info_into_the_and_fields_and_click_on_Search_button(String string, String string2, String string3) {
+		DealsPage dp = new DealsPage();
+		dp.destinationField.sendKeys(string);
+		dp.checkInDate.sendKeys(string2);
+		dp.checkOutDate.sendKeys(string3);
+		dp.searchButton.click();
+		BrowserUtilities.waitFor(5);
+	}
+	@Then("I verify page title contains {string}")
+	public void i_verify_page_title_contains(String string) {
+	    assertTrue(Driver.getDriver().getTitle().contains(string));
+	}
+
+//	@Then("I check {string} payment option")
+//	public void i_check_payment_option(String string) {
+//
+//	    DealsPage dp = new DealsPage();
+//	    String option = dp.paymentTypeSubcategories(string).getText();
+//	    if (option. ) {
+//			
+//		}
+//	}
+	@Then("I check Free cancellation payment option")
+	public void i_check_Free_cancellatin_payment_option() {
+		 DealsPage dp = new DealsPage();
+		 dp.freeCancellationCheckBox.click();
+	}
+
+	@When("I check Reserve now, pay later payment option")
+	public void i_check_Reserve_now_pay_later_payment_option() {
+		 DealsPage dp = new DealsPage();
+		 dp.reserveNowPayLaterCheckBox.click();
+	}
+
+	
+	@Then("Results must contain the text of my {string} selections")
+	public void results_must_contain_the_text_of_my_selections(String string) {
+//		DealsPage dp = new DealsPage();
+//		actual = dp.searchResults.getText();
+//		expected = string;
+//		assertEquals(expected, actual);
+		
+		
+//		assertTrue(dp.searchResultsList.contains(string));
+//		dp.searchResultsList.
+//		System.out.println(st);
+//		for (WebElement webElement : dp.searchResultsList) {
+//			assertTrue(webElement.getText().contains(string));
+//		}
+		
+	
+	
+		
+	}
+
+	
+
 
 
 }

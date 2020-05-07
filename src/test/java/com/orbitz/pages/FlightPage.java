@@ -13,25 +13,55 @@ public class FlightPage {
 		}
 		@FindBy(id = "primary-header-flight")
 		public WebElement linkFlight;
+		
 		@FindBy(xpath = "//h1[.=' Search Flights ']")
 		public WebElement searchFlightsText;
-		@FindBy(id = "flight-origin-flp")
+		
+		
+		
+		@FindBy(xpath = "//*[@id=\"flight-origin-flp\"]")     
 		public WebElement flyingFromInput;
-		@FindBy(id = "flight-destination-flp")
+		 
+		@FindBy(xpath = "//*[@id=\"flight-destination-flp\"]")   
 		public WebElement flyingToInput;
+		
 		@FindBy(id = "flight-departing-flp")
 		public WebElement flightDepartDate;
+		
 		@FindBy(id = "flight-returning-flp")
 		public WebElement flightReturningDate;
-		
-		@FindBy(xpath= "//span[.='Direct flights only']")
+		@FindBy(xpath = "//span[.='Direct flights only']")
 		public WebElement directFlightsText;
-		
 		@FindBy(xpath = "//*[@id=\"gcw-flights-form-flp\"]/div[8]/label/button")
 		public WebElement searchFligthCarButton;
-		
 		@FindBy(id = "flight-add-car-checkbox-flp")
 		public WebElement addCarCheckBox;
+		
+		@FindBy(id = "flight-adults-flp")
+		public WebElement adualts;
+		
+		@FindBy(id = "flight-children-flp")
+		public WebElement children;
+		
+		@FindBy(id = "flight-age-select-1-flp")
+		public WebElement childrenAge;
+		
+//		@FindBy(xpath = "//span[.='Search'][1]")
+//		public WebElement SearchButton;
+		
+		@FindBy(xpath = "//label[@class='col search-btn-col'][1]")
+		public WebElement SearchButton;
+		
+		
+		@FindBy(id = "stopFilter_stops-0")
+		public WebElement noStopOption;
+		
+		@FindBy(xpath = "//span[@class='duration-emphasis']")
+		public WebElement noStopOptionText;
+		
+		
+		@FindBy(linkText = "Please provide the ages of children below.")
+		public WebElement errorMessage;
 		
 	}
 
