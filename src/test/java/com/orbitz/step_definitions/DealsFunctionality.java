@@ -119,7 +119,7 @@ public class DealsFunctionality {
 //	    String option = dp.paymentTypeSubcategories(string).getText();
 //	    if (option. ) {
 //			
-//		}
+//		} 
 //	}
 	@Then("I check Free cancellation payment option")
 	public void i_check_Free_cancellatin_payment_option() {

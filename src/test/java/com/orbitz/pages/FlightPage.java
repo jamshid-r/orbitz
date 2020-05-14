@@ -1,5 +1,6 @@
 package com.orbitz.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -62,6 +63,14 @@ public class FlightPage {
 		
 		@FindBy(linkText = "Please provide the ages of children below.")
 		public WebElement errorMessage;
+		
+		@FindBy(xpath = "//ul[@class=\"utility-nav nav-group cf\"]//a[contains(.,\"Vacation Packages\")]")
+		public WebElement VacationPackageLink;
+		
+		public WebElement getLinks(String options) {
+			String customXpath = "//ul[@class=\\\"utility-nav nav-group cf\\\"]//a[contains(., '"+options+"')]" ;
+			return Driver.getDriver().findElement(By.xpath(customXpath));
+	}
 		
 	}
 

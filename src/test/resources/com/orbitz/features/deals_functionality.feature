@@ -42,7 +42,7 @@ Feature: Verification of Deals functionality
       | last-minute        |
       | pet-friendly       |
       
-   @test, @dj
+   @test, @dj, @my
    Scenario Outline: Verify error messages
    	Given Verify that user launch on login page by Orbitz title
    	When I click on Deals link
@@ -52,9 +52,9 @@ Feature: Verification of Deals functionality
    	
    	Examples:
    	| Destination | Check-in  	 | Check-out		|	Error Message						  |
-   	| 						| '06/01/2020' | '06/01/2020' | Destination is required.  |
-   	| Chicago		  |  					   | '06/02/2020' | Check-in is required. 	  |
-   	| Chicago		  | '06/01/2020' | 							| Check-out is required.    |
+   	| 						| 06/01/2020   |  06/01/2020  | Destination is required.  |
+   	| Chicago		  |  					   |  06/02/2020  | Check-in is required. 	  |
+   	| Chicago		  |  06/01/2020  | 							| Check-out is required.    |
    	
    	
    	
@@ -68,7 +68,7 @@ Feature: Verification of Deals functionality
    	And Results must contain the text of my "<payment type>" selections
    	
    	Examples:
-   	| payment type           | Destination  | Check-in  	 | Check-out		|
+   	| payment type           | Destination  | Check-in  	 | Check-out	|
    	|	Free cancellation 		 | Chicago		  | 06/01/2020 | 06/02/2020 	|
    	| Reserve now, pay later | Chicago		  | 06/01/2020 | 06/02/2020 	|
    	

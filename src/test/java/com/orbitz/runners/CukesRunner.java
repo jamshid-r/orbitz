@@ -17,7 +17,7 @@ import io.cucumber.junit.CucumberOptions;
 
 		},
 
-		tags = "@my"//"@dj" //"@test", 
+		tags = "@dj" //"@test", "@ex"
 	   
 		,features = "src/test/resources/com/orbitz/features", 
 		glue = "com/orbitz/step_definitions"

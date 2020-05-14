@@ -92,7 +92,7 @@
 					<testFailureIgnore>true</testFailureIgnore>
 					<includes>
 						<include>**/*CukeRunner.java</include>
-						<include>**/*FailedScenariosRunner.java</include>
+						<include>**/*FailedReRunner.java</include>
 					</includes>
 				</configuration>
 			</plugin>
