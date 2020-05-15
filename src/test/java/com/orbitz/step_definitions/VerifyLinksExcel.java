@@ -21,17 +21,27 @@ public class VerifyLinksExcel {
 		ExcelUtils sheet = new ExcelUtils("src/test/resources/com/orbitz/test-data/Book1.xlsx", "Sheet1");
 		List<Map<String, String>>allRows = sheet.getDataAsList();
 		
-		for (int i = 0; i < allRows.size(); i++) {
-			Map<String, String>row = allRows.get(i);
+		for (Map<String, String> map : allRows) {
+			if (map.get("Execute").equals("Y")) {
 			
-			 if (row.get("Execute").equalsIgnoreCase("Y")){
-			String expected  = row.get("Product");
+				String expected = map.get("Product");
+				
+				assertTrue(flightpg.getLinks("Product").isDisplayed());
+				
+			}
 			
-			assertTrue(flightpg.getLinks(expected).isDisplayed());
+		}
+//		for (int i = 0; i < allRows.size(); i++) {
+//			Map<String, String>row = allRows.get(i);
+//			
+//			 if (row.get("Execute").equalsIgnoreCase("Y")){
+//			String expected  = row.get("Product");
+			
+//			assertTrue(flightpg.getLinks(expected).isDisplayed());
 			//String actual = flightpg.VacationPackageLink.getText();
 //			System.out.println(flightpg.getLinks(row.get("Product")).getText());
-		}
-	}
+//		}
+//	}
 	}
 	@Then("I click on the link and proper text should be dispayed on the page")
 	public void i_click_on_the_link_and_proper_text_should_be_dispayed_on_the_page() {

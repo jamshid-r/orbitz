@@ -16,7 +16,7 @@ Feature: Verification of Flights functionality
     And   Verify Direct flights only message displayed on Search Flights page
     Then  The user clicks on Search Hotel and Car button
 
-	@my
+
     Scenario Outline: verify error message by miussing one of the required field info
   Given Verify that user launch on login page by Orbitz title
   When  The user clicks on Flight link

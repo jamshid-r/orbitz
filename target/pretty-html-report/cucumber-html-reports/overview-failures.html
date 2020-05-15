@@ -75,9 +75,9 @@ $(document).ready(function() {
   </thead>
   <tbody>
     <tr class="info">
-      <td>E-commerce Project</td>
+      <td>orbitz</td>
         <td>1</td>
-      <td>12 May 2020, 15:50</td>
+      <td>13 May 2020, 19:52</td>
     </tr>
   </tbody>
 </table>
@@ -117,25 +117,26 @@ $(document).ready(function() {
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_2057640975.html">Verify Orbitz links</a>
+      <a href="report-feature_3731115803.html">Verification of Deals functionality</a>
     </div>
 
 
 <div class="tags indention">
     <b>Tags:</b>
-       <a href="report-tag_2147548402.html">@ex</a>
-       <a href="report-tag_2147548402.html">@ex</a>
+       <a href="report-tag_4090000793.html">@test,</a>
+       <a href="report-tag_2149489701.html">@dj,</a>
+       <a href="report-tag_2147548651.html">@my</a>
 </div>
 
 
-  <span class="lead-duration duration">3.855</span>
+  <span class="lead-duration duration">19.991</span>
 
 
   <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
 
 <div class="brief failed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">Verify links</span>
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">Verify error messages</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -166,7 +167,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
               <span class="location name">com.orbitz.step_definitions.Hooks.setUp()</span>
 
-  <span class="lead-duration duration">31.078</span>
+  <span class="lead-duration duration">5.915</span>
 
           </div>
 
@@ -199,11 +200,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-When failed">
-  <span class="keyword indention">When</span>
-  <span class="name">Links are displayed</span>
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">Verify that user launch on login page by Orbitz title</span>
 
-  <span class="lead-duration duration">3.854</span>
+  <span class="lead-duration duration">1.592</span>
 
 </div>
 
@@ -211,23 +212,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-4">
-          <a>java.lang.IndexOutOfBoundsException:</a>
-      </div>
-      <div id="msg-4" class="collapse collapsable-details  in ">
-        <pre>java.lang.IndexOutOfBoundsException: Index: 4, Size: 3
-	at java.util.ArrayList.rangeCheck(Unknown Source)
-	at java.util.ArrayList.get(Unknown Source)
-	at com.orbitz.utilities.ExcelUtils.getDataAsList(ExcelUtils.java:84)
-	at com.orbitz.step_definitions.VerifyLinksExcel.links_are_displayed(VerifyLinksExcel.java:22)
-	at &#10045;.Links are displayed(file:///C:/Users/Lenovo/eclipse-workspace/orbitz/src/test/resources/com/orbitz/features/OrbitzExcel.feature:7)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -243,11 +227,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
-  <span class="keyword indention">Then</span>
-  <span class="name">I click on the link and proper text should be dispayed on the page</span>
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">I click on Deals link</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">6.794</span>
 
 </div>
 
@@ -255,6 +239,97 @@ $(document).ready(function() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">I enter info into the <span class="argument">&quot;Chicago&quot;</span>, <span class="argument">&quot;06/01/2020&quot;</span> and <span class="argument">&quot;&quot;</span> fields</span>
+
+  <span class="lead-duration duration">1.432</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">when some of the fields are left empty, the proper <span class="argument">&quot;Check-out is required.&quot;</span> should appear</span>
+
+  <span class="lead-duration duration">10.173</span>
+
+</div>
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-4">
+          <a>org.openqa.selenium.NoSuchElementException:</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details  in ">
+        <pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[contains(.,'Check-out is required.')]&quot;}
+  (Session info: chrome=81.0.4044.138)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LENOVO-PC', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 81.0.4044.138 (8c6c7ba89cc9..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:49609}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: aa040b993d4162fbf9cd1bc6ecf04c90
+*** Element info: {Using=xpath, value=//a[contains(.,'Check-out is required.')]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.orbitz.pages.DealsPage.errorMessages(DealsPage.java:101)
+	at com.orbitz.step_definitions.DealsFunctionality.when_some_of_the_fields_are_left_empty_the_proper_should_appear(DealsFunctionality.java:96)
+	at &#10045;.when some of the fields are left empty, the proper &quot;Check-out is required.&quot; should appear(file:///C:/Users/Lenovo/eclipse-workspace/orbitz/src/test/resources/com/orbitz/features/deals_functionality.feature:50)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -292,7 +367,7 @@ $(document).ready(function() {
             <span class="keyword indention">After</span>
               <span class="location name">com.orbitz.step_definitions.Hooks.tearDown(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">3.646</span>
+  <span class="lead-duration duration">1.278</span>
 
           </div>
 
@@ -305,13 +380,13 @@ $(document).ready(function() {
   <div class="embedding indention">
     <div data-toggle="collapse" data-target="#embedding-6" class="collapsable-control">
       <a>Attachment 1 (png)</a>
-      <a href="embeddings/embedding_772572559.png" download target="_blank">
+      <a href="embeddings/embedding_358844906.png" download target="_blank">
         <span class="download-button glyphicon glyphicon-download-alt"></span>
       </a>
     </div>
     <div id="embedding-6" class="collapse collapsable-details ">
       <div class="embedding-content">
-        <img src="embeddings/embedding_772572559.png">
+        <img src="embeddings/embedding_358844906.png">
       </div>
     </div>
   </div>

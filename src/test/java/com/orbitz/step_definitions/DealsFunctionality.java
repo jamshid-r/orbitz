@@ -102,6 +102,7 @@ public class DealsFunctionality {
 	public void i_enter_correct_info_into_the_and_fields_and_click_on_Search_button(String string, String string2, String string3) {
 		DealsPage dp = new DealsPage();
 		dp.destinationField.sendKeys(string);
+		dp.checkOutDate.clear();
 		dp.checkInDate.sendKeys(string2);
 		dp.checkOutDate.sendKeys(string3);
 		dp.searchButton.click();

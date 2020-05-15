@@ -1,20 +1,20 @@
 Feature: Verification of Deals functionality
 
-  @test, @dj
+  @test, @dj, @smoke
   Scenario: Verify I am on the correct page
     
     Given Verify that user launch on login page by Orbitz title
     When I click on Deals link
     Then Correct title should be dispalayed
 
- @test, @dj
+ @test, @dj, @smoke
   Scenario: Verify Weekly deals text is present
     Given Verify that user launch on login page by Orbitz title
     When I click on Deals link
     When Correct title should be dispalayed
     Then Weekly deals text is present
 
-  @test, @dj
+  @test, @dj, @smoke
   Scenario: Verify Weekly deals booking options
     Given Verify that user launch on login page by Orbitz title
     When I click on Deals link
@@ -58,7 +58,7 @@ Feature: Verification of Deals functionality
    	
    	
    	
-   @test, @dj, @my
+   @test, @dj
    Scenario Outline: Verify Payment Type functionality when filtering results
    Given Verify that user launch on login page by Orbitz title
    	When I click on Deals link
